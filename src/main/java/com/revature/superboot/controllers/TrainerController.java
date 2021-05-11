@@ -25,6 +25,13 @@ public class TrainerController {
     @Autowired
     private TrainerRepository trainerRepository;
 
+    public TrainerController(TrainerRepository trainerRepository) {
+        this.trainerRepository = trainerRepository;
+    }
+
+    public TrainerController() {
+    }
+
     @GetMapping("trainers/all")
     @ResponseBody
     public List<Person> getAll() {
